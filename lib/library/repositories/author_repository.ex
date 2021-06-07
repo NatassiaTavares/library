@@ -25,8 +25,11 @@ defmodule Library.Repositories.Author do
   end
 
   def get_names() do
-    query = from(a in Author,
-     select: a.name)
+    query =
+      from(a in Author,
+        select: a.name
+      )
+
     Repo.all(query)
   end
 end
